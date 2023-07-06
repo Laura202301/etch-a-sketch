@@ -1,0 +1,12 @@
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+}
+
+.grid-item {
+    flex-basis: calc(6.25% - 4px);
+    padding-top: calc(6.25% - 4px);
+    margin: 1px;
+    background-color: #ccc;
+}
