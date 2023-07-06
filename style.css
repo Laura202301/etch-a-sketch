@@ -10,3 +10,11 @@
     margin: 1px;
     background-color: #ccc;
 }
+
+.grid-item:hover {
+    background-color: red;
+  }
+
+.grid-item.red {
+    background-color: red;
+  }
