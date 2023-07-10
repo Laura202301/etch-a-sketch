@@ -1,0 +1,84 @@
+body {
+  font-family: "Amaranth", Verdana, Geneva, Tahoma, sans-serif;
+  background-color: rgb(243, 200, 200);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 0px 190px; 
+}
+
+.header {
+  padding: 20px;
+  color: rgb(250, 108, 132);
+  font-size: 50px;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+
+}
+
+img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.button-container1 {
+  display: flex;
+  justify-content: center;
+  gap: 52px;
+  align-items: center;
+}
+
+.shortcut-buttons {
+  max-width: 200px;
+}
+
+.grid-selection,
+.slide-container,
+.color-picker,
+.button-container1,
+.button-container2,
+.button-container3 {
+  padding: 10px;
+}
+
+.button-container2,
+.button-container3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toolbar-container,
+.grid-container {
+  border-radius: 8px;
+  border: 2px solid rgb(250, 108, 151);
+  padding: 20px;
+}
+
+/*///// Tabla //////*/
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 600px;
+}
+
+.grid-item {
+    flex-basis: calc(6.25% - 4px);
+    padding-top: calc(6.25% - 4px);
+    margin: 1px;
+    background-color: #ccc;
+}
+
+.grid-item:hover {
+    background-color: red;
+  }
+
+.grid-item.red {
+    background-color: red;
+  }
+/*///// Tabla //////*/
