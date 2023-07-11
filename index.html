@@ -1,52 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Etch-a-Sketch</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amaranth">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Etch-a-Sketch</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amaranth">
 </head>
 <body>
-    <div class="header">
-        <div class="header-text">Etch-a-Sketch</div>
-    </div>
-    <div class="main-container">
-        <div class= "toolbar-container">
-            <div class="grid-selection">Select your grid</div>
-            <div class="slide-container">
-                <input type="range" min="2" max="98" value="16" class="slider" id="my-range">
-            </div>
-            <div class="color-picker">
-            <label for="fav-color">Select your color</label>
-            </div>
-            <input type="color" id="fav-color" value="#000000">
-            <div class="button-container1">
-                <div class="shortcut-buttons">
-                    <div class="black-button">BLACK</div>
-                    <img class="black-dot" src="./images/black-dot.jpg" alt="Picture of a black dot">
-                </div>
-                <div class="shortcut-buttons">
-                    <div class="clear-button">CLEAR</div>
-                    <img class="white-dot" src="./images/white-dot.jpg" alt="Picture of a white dot">
-                </div>
-                <div class="shortcut-buttons">
-                    <div class="multicolor-button">MULTICOLOR</div>
-                    <img class="multicolor-dot" src="./images/color-dot.jpg" alt="Picture of a multicolor dot">
-                </div>
-            </div>
-            <div class="button-container2">
-                <div class="reset-button">RESET</div>
-                <img class="reset-symbol" src="./images/reset.jpg" alt="Picture of a reset symbol">
-            </div>
-            <div class="button-container3">
-                <div class="gradient">DARKENING</div>
-                <img class="gradient-dot" src="./images/gradient.jpeg" alt="Picture of a black and white gradient dot">
-            </div>
+  <div class="header">
+    <div class="header-text">Etch-a-Sketch</div>
+    <img class="img-tittle" src="./images/marker.jpg" alt="Picture of a red marker">
+  </div>
+  <div class="main-container">
+    <div class= "toolbar-container">
+      <div class="grid-selection">Select your grid</div>
+        <div class="slide-container">
+          <input type="range" min="2" max="98" value="16" class="slider" id="my-range">
         </div>
-        <div class="grid-container"></div>
+      <div class="color-picker">
+        <div class="picker-text">
+          <label for="fav-color">Select your color</label>
+        </div>
+        <div class = "picker-square">
+          <input type="color" id="fav-color" value="#000000">
+        </div>
+      </div>
+      <div class="button-container1">
+        <div class="shortcut-buttons">
+          <div class="dot-text">BLACK</div>
+          <img class="black-dot" src="./images/black-dot.jpg" alt="Picture of a black dot">
+        </div>
+        <div class="shortcut-buttons">
+          <div class="dot-text">MULTICOLOR</div>
+          <img class="multicolor-dot" src="./images/color-dot.jpg" alt="Picture of a multicolor dot">
+        </div>
+        <div class="shortcut-buttons">
+          <div class="dot-text">CLEAR</div>
+          <img class="white-dot" src="./images/white-dot.jpg" alt="Picture of a white dot">
+        </div>
+      </div>
+      <div class="button-container2">
+        <div class="dot-text">RESET</div>
+        <img class="reset-symbol" src="./images/reset.jpg" alt="Picture of a reset symbol">
+      </div>
+      <div class="button-container3">
+        <div class="dot-text">DARKENING</div>
+        <img class="gradient-dot" src="./images/gradient.jpeg" alt="Picture of a black and white gradient dot">
+      </div>
     </div>
-
+    <div class="grid-container"></div>
+    </div>
+    <div class="footer">
+      <div class= Name>Copyright © Laura202301</div>
+      <img class= "icon" src="./images/icon.jpg" alt="Picture of GitHub icon">
+    </div>
 
     <script src="javascript.js"></script> <!--The best practice is to put JavaScript <script> tags just before the closing </body> tag--> 
 </body>
