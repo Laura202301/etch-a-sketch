@@ -16,12 +16,13 @@
     <div class= "toolbar-container">
       <div class="grid-selection">Select your grid</div>
         <div class="slide-container">
-          <input type="range" min="2" max="98" value="16" class="slider" id="my-range">
+          <input type="range" min="2" max="98" value="16" class="slider" id="my-range"> 
+          <p><span id="scale"></span></p> <!--Note on span at the bottom--> 
         </div>
       <div class="color-picker">
         <div class="picker-text">
           <label for="fav-color">Select your color</label>
-        </div>
+        </div> <!--Note on label for at the bottom--> 
         <div class = "picker-square">
           <input type="color" id="fav-color" value="#000000">
         </div>
@@ -50,14 +51,16 @@
       </div>
     </div>
     <div class="grid-container"></div>
-    </div>
-    <div class="footer">
+  </div>
+  <div class="footer">
       <div class= Name>Copyright © Laura202301</div>
       <img class= "icon" src="./images/icon.jpg" alt="Picture of GitHub icon">
-    </div>
+  </div>
 
-    <script src="javascript.js"></script> <!--The best practice is to put JavaScript <script> tags just before the closing </body> tag--> 
+  <script src="javascript.js"></script> <!--The best practice is to put JavaScript <script> tags just before the closing </body> tag--> 
 </body>
 </html>
 
-<!--Se agrega el atributo for="favcolor" al elemento <div> para mantener la asociación con el elemento de entrada.--> 
+
+
+<!--SPAN NOTE: The <span> element can be used as a container for dynamic data that changes through JavaScript. By assigning an id to the <span> element, you can easily reference and manipulate its content using JavaScript.--> 
