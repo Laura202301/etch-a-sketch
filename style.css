@@ -45,11 +45,11 @@ img:hover {
 }
 
 .grid-selection,
-.slide-container,
-.picker-square,
+.slider-container,
+.picker-container,
 .picker-text,
-.button-container2,
-.button-container3 {
+.reset-button,
+.darkening-button {
   padding: 10px;
 }
 
@@ -66,11 +66,11 @@ img:hover {
 
 
 /*///// DOT BUTTONS  //////*/
-.button-container1 {
+.button-container {
   display: flex;
   justify-content: center;
   gap: 36px;
-  padding: 75px 0px;
+  padding: 70px 0px;
 }
 
 .dot-text {
@@ -79,8 +79,8 @@ img:hover {
 
 
 /*///// BUTTONS  //////*/
-.button-container2,
-.button-container3 {
+.reset-button,
+.darkening-button {
   display: flex;
   justify-content: center;
   border-radius: 8px;
@@ -95,12 +95,12 @@ img:hover {
   cursor: pointer;
 }
 
-.button-container2:hover,
-.button-container3:hover {
+.reset-button:hover,
+.darkening-button:hover {
   opacity: 1; 
 }
 
-.button-container2 {
+.reset-button {
  margin-bottom: 20px;
 }
 
@@ -114,7 +114,7 @@ img:hover {
 
 
 /*///// SLIDER //////*/
-.slide-container {
+.slider-container {
   display: flex;
   align-items: center;
 }
@@ -135,7 +135,7 @@ img:hover {
   opacity: 1; 
 }
 
-/* Text that shows the graduation on the slider */
+/* Slider graduation text */
 p {
   background: #756666;
   border: 4px ridge rgba(255, 141, 141, 0.281);
@@ -156,7 +156,6 @@ p {
   background: #db6973; 
   cursor: pointer; 
 }
-
 /*Note: The ::-webkit-slider-thumb pseudo-element is a vendor-specific selector used to style the appearance of the slider's thumb in webkit-based browsers (such as Chrome). It allows to customize the visual representation of the draggable handle that users interact with when adjusting the slider's value.*/
 
 
@@ -176,6 +175,10 @@ p {
   opacity: 1;
 }
 
+.picker-container {
+  padding-top: 24px;
+}
+
 /*///// GRID //////*/
 .grid-container {
   display: flex;
@@ -190,16 +193,6 @@ p {
   margin: 1px;
   background-color: #ccc;
 }
-/*Note on VAR, CALC, Flexbasis y Padding-top at the bottom */
-
-.grid-item:hover {
-  background-color: red;
-}
-
-.grid-item.red {
-  background-color: red;
-}
-
 
 /*///// FOOTER //////*/
 .footer {
@@ -215,9 +208,3 @@ p {
   width: 30px;
   height: 30px;
 }
-
-/*NOTA VAR: La función var() se utiliza para acceder a variables CSS personalizadas. Estas variables pueden ser definidas en cualquier parte del código CSS utilizando la sintaxis --nombre-variable: valor. Luego, puedes utilizar la función var() para acceder al valor de la variable en las propiedades CSS.
-
-NOTA CALC:La función calc() en CSS se utiliza para realizar cálculos matemáticos en las propiedades CSS. Permite combinar diferentes unidades de medida y realizar operaciones aritméticas dentro de una expresión.
-
-NOTA: Flex-basis se utiliza para establecer el tamaño inicial del elemento flexible en un contenedor con diseño de flexbox. Padding-top establece el espacio de relleno superior del elemento. En este caso, ambos se están calculando dinámicamente utilizando la función calc().*/
