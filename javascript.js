@@ -2,6 +2,9 @@
 const gridContainer = document.querySelector('.grid-container');
 const slider = document.getElementById('my-range');
 const scale = document.getElementById('scale');
+const colorPicker = document.getElementById('fav-color'); 
+
+let currentColor = colorPicker.value; 
 
 // Function to update the grid size
 function updateGridSize() {
@@ -30,11 +33,11 @@ function updateGridSize() {
 
     // Add event listeners to each grid item
     gridItem.addEventListener('mouseover', function() {
-      this.style.backgroundColor = 'red';
+      this.style.backgroundColor = currentColor; 
     });
 
     gridItem.addEventListener('mouseout', function() {
-      this.style.backgroundColor = 'red';
+      this.style.backgroundColor = currentColor; 
     });
   }
 
@@ -42,8 +45,14 @@ function updateGridSize() {
   scale.textContent = `${gridSize} x ${gridSize}`;
 }
 
-// Add event listener to the slider input
+// Function to handle color picker change
+function handleColorChange() { 
+  currentColor = colorPicker.value; 
+}
+
+// Add event listeners
 slider.addEventListener('input', updateGridSize);
+colorPicker.addEventListener('input', handleColorChange); 
 
 // Initialize the grid size
 updateGridSize();
