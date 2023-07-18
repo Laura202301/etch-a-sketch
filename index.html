@@ -15,19 +15,17 @@
   <div class="main-container">
     <div class= "toolbar-container">
       <div class="grid-selection">Select your grid</div>
-        <div class="slide-container">
+        <div class="slider-container">
           <input type="range" min="2" max="98" value="16" class="slider" id="my-range"> 
-          <p><span id="scale"></span></p> <!--Note on span at the bottom--> 
+          <p id="scale"></p> <!--slider graduation text--> 
         </div>
       <div class="color-picker">
-        <div class="picker-text">
-          <label for="fav-color">Select your color</label>
-        </div> <!--Note on label for at the bottom--> 
-        <div class = "picker-square">
+        <div class="picker-text">Select your color</div>
+        <div class = "picker-container">
           <input type="color" id="fav-color" value="#000000">
         </div>
       </div>
-      <div class="button-container1">
+      <div class="button-container">
         <div class="shortcut-buttons">
           <div class="dot-text">BLACK</div>
           <img class="black-dot" src="./images/black-dot.jpg" alt="Picture of a black dot">
@@ -38,14 +36,14 @@
         </div>
         <div class="shortcut-buttons">
           <div class="dot-text">CLEAR</div>
-          <img class="white-dot" src="./images/white-dot.jpg" alt="Picture of a white dot">
+          <img class="clear-dot" src="./images/white-dot.jpg" alt="Picture of a white dot">
         </div>
       </div>
-      <div class="button-container2">
+      <div class="reset-button">
         <div class="dot-text">RESET</div>
         <img class="reset-symbol" src="./images/reset.jpg" alt="Picture of a reset symbol">
       </div>
-      <div class="button-container3">
+      <div class="darkening-button">
         <div class="dot-text">DARKENING</div>
         <img class="gradient-dot" src="./images/gradient.jpeg" alt="Picture of a black and white gradient dot">
       </div>
@@ -60,7 +58,3 @@
   <script src="javascript.js"></script> <!--The best practice is to put JavaScript <script> tags just before the closing </body> tag--> 
 </body>
 </html>
-
-
-
-<!--SPAN NOTE: The <span> element can be used as a container for dynamic data that changes through JavaScript. By assigning an id to the <span> element, you can easily reference and manipulate its content using JavaScript.--> 
