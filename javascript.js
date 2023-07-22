@@ -1,4 +1,4 @@
-// Get the grid container element
+// Get references to specific elements from the HTML document
 const gridContainer = document.querySelector('.grid-container');
 const slider = document.getElementById('my-range');
 const scale = document.getElementById('scale');
@@ -6,6 +6,7 @@ const colorPicker = document.getElementById('fav-color');
 const blackDot = document.querySelector('.black-dot'); 
 const multicolorDot = document.querySelector('.multicolor-dot'); 
 const clearDot = document.querySelector('.clear-dot'); 
+const resetButton = document.querySelector('.reset-button');
 
 let currentColor = colorPicker.value;
 let isMulticolorMode = false; 
@@ -76,6 +77,14 @@ function handleClearDotClick() {
   currentColor = '#ccc';
 }
 
+// Function to reset the grid item colors  //NUEVO
+function resetGridColors() {
+  const gridItems = Array.from(gridContainer.getElementsByClassName('grid-item'));
+  gridItems.forEach((item) => {
+    item.style.backgroundColor = '#ccc';
+  });
+}
+
 // Helper function to generate a random color 
 function getRandomColor() {
   const letters = '0123456789ABCDEF';
@@ -92,6 +101,7 @@ colorPicker.addEventListener('input', handleColorChange);
 blackDot.addEventListener('click', handleBlackDotClick); 
 multicolorDot.addEventListener('click', handleMulticolorDotClick); 
 clearDot.addEventListener('click', handleClearDotClick); 
+resetButton.addEventListener('click', resetGridColors); 
 
 // Initialize the grid size
 updateGridSize();
