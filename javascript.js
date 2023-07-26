@@ -8,6 +8,7 @@ const multicolorDot = document.querySelector('.multicolor-dot');
 const clearDot = document.querySelector('.clear-dot'); 
 const resetButton = document.querySelector('.reset-button');
 const darkeningSwitch = document.querySelector('.darkening-switch input');
+const toggleSwitch = document.querySelector('.toggle-switch');
 
 let currentColor = colorPicker.value;
 let isMulticolorMode = false;
@@ -135,9 +136,25 @@ blackDot.addEventListener('click', handleBlackDotClick);
 multicolorDot.addEventListener('click', handleMulticolorDotClick); 
 clearDot.addEventListener('click', handleClearDotClick); 
 resetButton.addEventListener('click', resetGridColors); 
+
+
+// Add event listener to the darkeningSwitch element
 darkeningSwitch.addEventListener('change', function() {
   isDarkeningEnabled = this.checked;
+
+  // Modify the opacity of the .toggle-switch element
+  toggleSwitch.style.opacity = isDarkeningEnabled ? '1' : '0.7';
 });
+
+// Add event listeners to handle the mouse hover event
+toggleSwitch.addEventListener('mouseenter', function() {
+  toggleSwitch.style.opacity = isDarkeningEnabled ? '1' : '1';
+});
+
+toggleSwitch.addEventListener('mouseleave', function() {
+  toggleSwitch.style.opacity = isDarkeningEnabled ? '1' : '0.7';
+});
+
 
 // Initialize the grid size
 updateGridSize();
