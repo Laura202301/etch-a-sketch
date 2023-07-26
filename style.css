@@ -20,6 +20,28 @@ body {
   justify-content: center;
 }
 
+.toolbar-container,
+.grid-container {
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px;
+  background: rgba(245, 153, 153, 0.534);
+  border: 4px ridge rgba(255, 141, 141, 0.281);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+  0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.grid-selection,
+.slider-container,
+.picker-container,
+.picker-text,
+.reset-button,
+.switch-text {
+  padding: 10px;
+}
+
+
+/*///// IMAGES  //////*/
 img {
   width: 50px;
   height: 50px;
@@ -37,75 +59,13 @@ img:hover {
 }
 
 .img-tittle,
-.reset-symbol,
-.gradient-dot {
+.reset-symbol {
   opacity: 1;
   transition: none;
   cursor:default;
 }
 
-.grid-selection,
-.slider-container,
-.picker-container,
-.picker-text,
-.reset-button,
-.darkening-button {
-  padding: 10px;
-}
-
-.toolbar-container,
-.grid-container {
-  border-radius: 8px;
-  padding: 20px;
-  margin: 10px;
-  background: rgba(245, 153, 153, 0.534);
-  border: 4px ridge rgba(255, 141, 141, 0.281);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
-  0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-
-/*///// DOT BUTTONS  //////*/
-.button-container {
-  display: flex;
-  justify-content: center;
-  gap: 36px;
-  padding: 70px 0px;
-}
-
-.dot-text {
-  padding: 10px;
-}
-
-
-/*///// BUTTONS  //////*/
-.reset-button,
-.darkening-button {
-  display: flex;
-  justify-content: center;
-  border-radius: 8px;
-  border: 4px ridge rgba(255, 141, 141, 0.281);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
-  0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  background: rgba(255, 255, 255, 0.288);
-  padding: 4px;
-  margin: 0px 60px 10px;
-  opacity: 0.7;
-  transition: opacity .2s;
-  cursor: pointer;
-}
-
-.reset-button:hover,
-.darkening-button:hover {
-  opacity: 1; 
-}
-
-.reset-button {
- margin-bottom: 20px;
-}
-
-.reset-symbol,
-.gradient-dot {
+.reset-symbol {
   width: 40px;
   height: 40px;
   border: none;
@@ -136,7 +96,7 @@ img:hover {
 }
 
 /* Slider graduation text */
-p {
+#scale {
   background: #756666;
   border: 4px ridge rgba(255, 141, 141, 0.281);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
@@ -179,6 +139,102 @@ p {
   padding-top: 24px;
 }
 
+
+/*///// DOT BUTTONS  //////*/
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 36px;
+  padding: 65px 0px;
+}
+
+.dot-text {
+  padding: 10px;
+}
+
+
+/*///// BUTTONS  //////*/
+.reset-button,
+.toggle-switch {
+  display: flex;
+  justify-content: center;
+  border-radius: 8px;
+  border: 4px ridge rgba(255, 141, 141, 0.281);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+  0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background: rgba(255, 255, 255, 0.288);
+  padding: 4px;
+  margin: 0px 60px 10px;
+  opacity: 0.7;
+  transition: opacity .2s;
+}
+
+.reset-button {
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.reset-button:hover,
+.toggle-switch:hover {
+  opacity: 1; 
+}
+
+
+/*///// TOGGLE SWITCH //////*/
+
+.toggle-switch {
+  align-items: center;
+}
+
+.darkening-switch {
+  position: relative;
+  width: 46px;
+  height: 26px;
+}
+
+/* Hide default HTML checkbox */
+.darkening-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider2 {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #756666;
+}
+
+.slider2:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #db6973; 
+  transition: .4s; /* creates a smooth animation effect when moving the switch slider */
+}
+
+.darkening-switch input:checked + .slider2:before {
+  transform: translateX(20px);
+}
+
+/* Rounded appearance */
+.slider2.round {
+  border-radius: 20px;
+}
+
+.slider2.round:before {
+  border-radius: 50%;
+}
+
+
 /*///// GRID //////*/
 .grid-container {
   display: flex;
@@ -193,6 +249,7 @@ p {
   margin: 1px;
   background-color: #ccc;
 }
+
 
 /*///// FOOTER //////*/
 .footer {
