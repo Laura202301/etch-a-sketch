@@ -16,13 +16,13 @@
     <div class= "toolbar-container">
       <div class="grid-selection">Select your grid</div>
         <div class="slider-container">
-          <input type="range" min="2" max="98" value="16" class="slider" id="my-range"> 
+          <input type="range" min="2" max="98" value="16" class="slider" id="myRange"> 
           <p id="scale"></p> <!--slider graduation text--> 
         </div>
       <div class="color-picker">
         <div class="picker-text">Select your color</div>
         <div class = "picker-container">
-          <input type="color" id="fav-color" value="#000000">
+          <input type="color" id="favColor" value="#000000">
         </div>
       </div>
       <div class="button-container">
@@ -51,6 +51,19 @@
         </label>
       </div>
     </div>
+
+    <div class="modal" id="myModal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>DARKENING EFFECT IS ACTIVATED!</p>
+        <img class="gradient-dot" src="./images/gradient.jpeg" alt="Picture of a black and white gradient dot">
+        <p>Each interaction adds 10% more color to the painted squares.</p>
+        <p>You will achieve a completely black square in a maximum of 10 interactions.</p>
+        <img class="gradient-red" src="./images/gradient-red.jpg" alt="Picture of gradient square red to black">
+        <p>You can <u>disable</u> the darkening effect at any time using the <u>toggle switch</u>.</p>
+      </div>
+    </div>
+    
     <div class="grid-container"></div>
   </div>
   <div class="footer">
