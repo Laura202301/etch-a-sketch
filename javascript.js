@@ -1,8 +1,8 @@
 // Get references to specific elements from the HTML document
 const gridContainer = document.querySelector('.grid-container');
-const slider = document.getElementById('my-range');
+const slider = document.getElementById('myRange');
 const scale = document.getElementById('scale');
-const colorPicker = document.getElementById('fav-color');
+const colorPicker = document.getElementById('favColor');
 const blackDot = document.querySelector('.black-dot'); 
 const multicolorDot = document.querySelector('.multicolor-dot'); 
 const clearDot = document.querySelector('.clear-dot'); 
@@ -144,6 +144,26 @@ darkeningSwitch.addEventListener('change', function() {
 
   // Modify the opacity of the .toggle-switch element
   toggleSwitch.style.opacity = isDarkeningEnabled ? '1' : '0.7';
+
+  // Show/hide the modal dialog box based on darkening mode
+  const modal = document.getElementById('myModal');
+  const closeButton = document.getElementsByClassName('close')[0];
+
+  if (isDarkeningEnabled) {
+    modal.style.display = 'block';
+
+    // Close the modal dialog box when the 'x' button is clicked
+    closeButton.onclick = function() {
+      modal.style.display = 'none';
+    };
+
+    // Close the modal dialog box when clicking outside of it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = 'none';
+      }
+    };
+  }
 });
 
 // Add event listeners to handle the mouse hover event
@@ -155,6 +175,10 @@ toggleSwitch.addEventListener('mouseleave', function() {
   toggleSwitch.style.opacity = isDarkeningEnabled ? '1' : '0.7';
 });
 
+// Add event listener to footer icon
+document.querySelector(".icon").addEventListener("click", function() {
+  window.open("https://github.com/Laura202301/etch-a-sketch", "_blank");
+});
 
 // Initialize the grid size
 updateGridSize();
